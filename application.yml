@@ -1,15 +1,16 @@
 spring:
  application:
- name: local
+ name: config-default
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
 
-
-  instance:
-       hostname: localhost
   server:
        waitTimeInMsSyncEmpty: 0
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka
+       
        
        
